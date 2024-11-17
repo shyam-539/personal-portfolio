@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./footer.css";
 import Resume from "../../assets/resume.pdf";
 
-
 const Footer = () => {
   return (
     <footer className="footer py-3">

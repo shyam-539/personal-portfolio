@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./project.css";
+import dinerlyImg from "../../assets/Dinerly.webp";
+import doctorPatientImg from "../../assets/DoctorPatient.png";
+import libroxImg from "../../assets/Librox.png";
+import weatherDashboardImg from "../../assets/weatherly.png";
+import ResterooImg from "../../assets/Resteroo.webp";
+import securooImg from "../../assets/Securoo.webp";
 
-// Sample Projects Data
+//Projects Data
 const projectsData = [
   {
     title: "Dinerly",
@@ -11,6 +17,7 @@ const projectsData = [
     techStack: ["PHP", "Laravel", "MySQL"],
     repoLink: "https://github.com/shyam-539/Dinerly",
     demoLink: "https://project-one.com",
+    image: dinerlyImg,
   },
   {
     title: "DoctorPatient",
@@ -18,6 +25,7 @@ const projectsData = [
     techStack: ["PHP", "Laravel", "MySQL"],
     repoLink: "https://github.com/shyam-539/DoctorPatient",
     demoLink: "https://project-two.com",
+    image: doctorPatientImg,
   },
   {
     title: "Librox",
@@ -25,6 +33,7 @@ const projectsData = [
     techStack: ["PHP", "Laravel", "MySQL"],
     repoLink: "https://github.com/shyam-539/library_management_system",
     demoLink: "https://project-three.com",
+    image: libroxImg,
   },
   {
     title: "WeatherDashboard",
@@ -32,6 +41,21 @@ const projectsData = [
     techStack: ["HTML", "CSS", "JavaScript", "API"],
     repoLink: "https://github.com/shyam-539/weatherDashboard",
     demoLink: "https://project-four.com",
+    image: weatherDashboardImg,
+  },{
+    title: "Resteroo",
+    description: "A Restaurant Managemant Ai App.",
+    techStack: ["NumPy", "ML", "Python"],
+    repoLink: "https://github.com/shyam-539/weatherDashboard",
+    demoLink: "https://project-four.com",
+    image: ResterooImg,
+  },{
+    title: "Securoo",
+    description: "A weather forecasting dashboard using an API.",
+    techStack: ["HTML", "CSS", "JavaScript", "API"],
+    repoLink: "https://github.com/shyam-539/weatherDashboard",
+    demoLink: "https://project-four.com",
+    image: securooImg,
   },
 ];
 
@@ -60,7 +84,14 @@ const Projects = () => {
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`}
             >
-              <div className="project-card p-4 bg-light rounded shadow-sm">
+              <div
+                className="project-card p-4 bg-light rounded shadow-sm"
+                style={{
+                  backgroundImage: `url(${project.image})`, // Dynamically set the background image
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
                 <h4 className="project-title">{project.title}</h4>
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech-stack mb-3">

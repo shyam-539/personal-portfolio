@@ -1,157 +1,191 @@
 /* Projects Section */
 .projects__title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 3rem;
-  }
-  
-  /* Project Card Styling */
-  .project-card {
-    background-color: #f9f9f9;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  }
-  
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+/* Project Card Styling */
+.project-card {
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: white; /* Ensures text is visible on darker backgrounds */
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Dark overlay on the image */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  opacity: 10; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+
+/* Hover effects */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Make sure text is legible */
+.project-title,
+.project-description,
+.project-tech-stack {
+  z-index: 1; /* Ensures text is above the overlay */
+}
+
+/* Title Styling */
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* Make sure the title is white */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow to the text */
+}
+
+/* Description Styling */
+.project-description {
+  font-size: 1rem;
+  color: #fff; /* White text for visibility */
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Tech Stack Styling */
+.project-tech-stack {
+  font-size: 0.9rem;
+  color: #fff; /* White text for tech stack */
+  margin-bottom: 1rem;
+}
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tech-item {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for better visibility */
+  color: #333;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Button Styling */
+.project-links a {
+  text-decoration: none;
+}
+
+/* Buttons for Repo and Demo */
+.project-links .btn {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.project-links .btn-dark {
+  background-color: #333;
+  border-color: #333;
+}
+
+.project-links .btn-dark:hover {
+  background-color: #444;
+}
+
+.project-links .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.project-links .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 62rem) {
   .project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 1.25rem;
   }
-  
+
   .project-description {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-  }
-  
-  .project-tech-stack {
     font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 1rem;
   }
-  
-  .tech-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+
   .tech-item {
-    display: inline-block;
-    background-color: #e1e1e1;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
   }
-  
-  .project-links a {
-    text-decoration: none;
-  }
-  
-  /* Buttons for Repo and Demo */
+
   .project-links .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .projects__title {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .tech-item {
+    font-size: 0.8rem;
+  }
+
+  .project-links .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+@media screen and (max-width: 36rem) {
+  .projects__title {
+    font-size: 1.75rem;
+  }
+
+  .project-card {
+    padding: 0.8rem;
+  }
+
+  .project-title {
     font-size: 1rem;
-    padding: 0.6rem 1.2rem;
   }
-  
-  .project-links .btn-dark {
-    background-color: #333;
-    border-color: #333;
+
+  .project-description {
+    font-size: 0.8rem;
   }
-  
-  .project-links .btn-dark:hover {
-    background-color: #444;
+
+  .tech-item {
+    font-size: 0.75rem;
   }
-  
-  .project-links .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+
+  .project-links .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
-  
-  .project-links .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive Design */
-  @media screen and (max-width: 62.0rem) { 
-    .project-title {
-      font-size: 1.25rem;
-    }
-  
-    .project-description {
-      font-size: 0.9rem;
-    }
-  
-    .tech-item {
-      font-size: 0.85rem;
-      padding: 0.3rem 0.7rem;
-    }
-  
-    .project-links .btn {
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
-  @media screen and (max-width: 48.0rem) { 
-    .projects__title {
-      font-size: 2rem;
-    }
-  
-    .project-card {
-      padding: 1rem;
-    }
-  
-    .project-title {
-      font-size: 1.2rem;
-    }
-  
-    .project-description {
-      font-size: 0.9rem;
-    }
-  
-    .tech-item {
-      font-size: 0.8rem;
-    }
-  
-    .project-links .btn {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.9rem;
-    }
-  }
-  
-  @media screen and (max-width: 36.0rem) { 
-    .projects__title {
-      font-size: 1.75rem;
-    }
-  
-    .project-card {
-      padding: 0.8rem;
-    }
-  
-    .project-title {
-      font-size: 1rem;
-    }
-  
-    .project-description {
-      font-size: 0.8rem;
-    }
-  
-    .tech-item {
-      font-size: 0.75rem;
-    }
-  
-    .project-links .btn {
-      font-size: 0.85rem;
-      padding: 0.4rem 0.8rem;
-    }
-  }
-  
+}

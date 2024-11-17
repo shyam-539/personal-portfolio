@@ -3,7 +3,7 @@ import Header from "../header/Header";
 import "./about.css";
 import Footer from "../footer/Footer";
 import AboutImg from "../../assets/about.png";
-import Resume from "../../assets/resume.pdf";
+import Resume from "../../assets/Resume.pdf";
 
 const About = () => {
   return (

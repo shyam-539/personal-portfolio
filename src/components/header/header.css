@@ -51,13 +51,13 @@
   
   /* Active state for hamburger icon */
   .navbar-toggler.active {
-    background-color: hsl(0, 0%, 20%) !important;  /* Dark background */
+    background-color: hsl(0, 0%, 20%) !important;  
   }
   
   .navbar-toggler.active .navbar-toggler-icon::before,
   .navbar-toggler.active .navbar-toggler-icon::after,
   .navbar-toggler.active .navbar-toggler-icon span {
-    background-color: white;  /* Change icon to white */
+    background-color: white;  
   }
   
   /* Hide hamburger icon when active */

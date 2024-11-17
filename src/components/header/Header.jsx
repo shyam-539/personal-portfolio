@@ -34,7 +34,7 @@ const Header = () => {
             className={`collapse navbar-collapse ${isActive ? "show" : ""}`}
             id="navbarNav"
           >
-           <ul className="navbar-nav ms-auto">
+            <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Work
