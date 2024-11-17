@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./footer.css";
-import Resume from "../../assets/resume.pdf";
+import Resume from "../../assets/Resume.pdf";
 
 const Footer = () => {
   return (
