@@ -1,0 +1,38 @@
+/* Footer Container */
+.footer {
+    background-color: #ffffff; /* Light gray background */
+    font-size: 1rem; /* Default font size */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+  }
+  
+  .footer-links {
+    padding: 0;
+  }
+  
+  /* Footer Links */
+  .footer-link {
+    color: #6c757d; /* Muted blue-gray color */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    transition: color 0.2s, transform 0.2s;
+  }
+  
+  .footer-link:hover {
+    color: #495057; /* Darker hover color */
+    text-decoration: underline;
+    transform: scale(1.05); /* Subtle zoom effect */
+  }
+  
+  /* Small Devices */
+  @media (max-width: 576px) {
+    .footer-link {
+      display: block; /* Stack links vertically */
+      padding: 0.5rem 0; /* Reduce padding for smaller screens */
+    }
+  
+    .footer {
+      font-size: 0.9rem; /* Slightly smaller font size for smaller screens */
+    }
+  }
+  

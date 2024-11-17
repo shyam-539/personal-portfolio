@@ -1,0 +1,157 @@
+/* Projects Section */
+.projects__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3rem;
+  }
+  
+  /* Project Card Styling */
+  .project-card {
+    background-color: #f9f9f9;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-tech-stack {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .tech-item {
+    display: inline-block;
+    background-color: #e1e1e1;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-links a {
+    text-decoration: none;
+  }
+  
+  /* Buttons for Repo and Demo */
+  .project-links .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .project-links .btn-dark {
+    background-color: #333;
+    border-color: #333;
+  }
+  
+  .project-links .btn-dark:hover {
+    background-color: #444;
+  }
+  
+  .project-links .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .project-links .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 62.0rem) { 
+    .project-title {
+      font-size: 1.25rem;
+    }
+  
+    .project-description {
+      font-size: 0.9rem;
+    }
+  
+    .tech-item {
+      font-size: 0.85rem;
+      padding: 0.3rem 0.7rem;
+    }
+  
+    .project-links .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 48.0rem) { 
+    .projects__title {
+      font-size: 2rem;
+    }
+  
+    .project-card {
+      padding: 1rem;
+    }
+  
+    .project-title {
+      font-size: 1.2rem;
+    }
+  
+    .project-description {
+      font-size: 0.9rem;
+    }
+  
+    .tech-item {
+      font-size: 0.8rem;
+    }
+  
+    .project-links .btn {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 36.0rem) { 
+    .projects__title {
+      font-size: 1.75rem;
+    }
+  
+    .project-card {
+      padding: 0.8rem;
+    }
+  
+    .project-title {
+      font-size: 1rem;
+    }
+  
+    .project-description {
+      font-size: 0.8rem;
+    }
+  
+    .tech-item {
+      font-size: 0.75rem;
+    }
+  
+    .project-links .btn {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  

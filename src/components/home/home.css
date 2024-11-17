@@ -1,0 +1,187 @@
+/* Home Container */
+.home__container {
+  row-gap: 7rem;
+}
+
+/* Home Description */
+.home__description {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+/* Profile Image */
+.home__img {
+  width: 22rem; /* Default size for larger screens */
+  height: 22rem;
+  border-radius: 50%;
+  animation: profile__animate 8s ease-in-out infinite 1s;
+  margin: 0 auto;
+  background: url(../../assets/profile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 0.6rem rgba(255, 255, 255, 0.3); /* 9px to rem */
+}
+
+/* Keyframes for profile image animation */
+@keyframes profile__animate {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes textChange {
+  0%, 100% {
+    content: "Software Engineer";
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    content: "UI/UX Designer";
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+
+
+/* Scroll Animation */
+.home__scroll {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.home__social-icon {
+  color: darkslategrey;
+}
+
+/* Home Section Margin */
+.home {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+/* Responsive Breakpoints */
+
+/* Large Devices (992px) */
+@media screen and (max-width: 62rem) { /* 992px */
+  .home__title {
+    font-size: 2.25rem;
+  }
+
+  .home__img {
+    width: 15.625rem; /* 250px */
+    height: 15.625rem;
+  }
+
+  .home__description {
+    font-size: 1rem;
+  }
+
+  .row {
+    row-gap: 3rem; 
+  }
+}
+
+/* Medium Devices (768px) */
+@media screen and (max-width: 48rem) { 
+  .home {
+    padding: 2rem 0;
+  }
+
+  .home__title {
+    font-size: 1.875rem;
+  }
+
+  .home__img {
+    width: 12.5rem; 
+    height: 12.5rem;
+    margin-bottom: 2rem; 
+  }
+
+  .home__typing {
+    
+    max-width: 500px; /* Further reduce max width */
+  }
+
+  .home__description {
+    font-size: 0.85rem;
+  }
+
+  .home__social-icon {
+    font-size: 1.5rem;
+  }
+
+  .home__scroll {
+    display: none; 
+  }
+
+  .flex-column-reverse {
+    flex-direction: column-reverse; 
+  }
+}
+
+/* Small Devices (576px) */
+@media screen and (max-width: 36rem) { 
+  .home__container {
+    text-align: center;
+  }
+
+  .home__title {
+    font-size: 1.75rem;
+  }
+
+  .home__img {
+    width: 9.375rem; 
+    height: 9.375rem;
+  }
+
+  .home__typing {
+    max-width: 400px; /* Adjust width for smaller screens */
+  }
+
+  .home__description {
+    font-size: 0.8rem;
+  }
+
+  .home__social {
+    justify-content: center;
+  }
+}
+
+/* Extra Small Devices (350px) */
+@media screen and (max-width: 21.875rem) { /* 350px */
+  .home__title {
+    font-size: 1rem;
+  }
+
+  .home__subtitle {
+    font-size: 1rem;
+  }
+
+  .home__description {
+    font-size: 0.80rem;
+  }
+
+  .home__img {
+    width: 7.5rem; /* 120px */
+    height: 7.5rem;
+  }
+
+  .home__typing {
+    max-width: 400px; /* Restrict max width further */
+  }
+
+  .home__social-icon {
+    font-size: 1.25rem;
+  }
+}
