@@ -15,7 +15,7 @@ const Header = () => {
     <header className="header">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             Shyam
           </a>
           <button
