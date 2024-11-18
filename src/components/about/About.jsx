@@ -89,7 +89,7 @@ const About = () => {
                   Contact Me
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/your-linkedin-profile"
+                  href="https://www.linkedin.com/in/shyamsankarp539/"
                   className="btn btn-primary"
                   target="_blank"
                   rel="noopener noreferrer"
